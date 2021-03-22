@@ -60,6 +60,30 @@ a {
   border-bottom: .2rem solid #0065FC;
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="search"] {
+  height: 2.2rem;
+  width: 100%;
+  border: .2rem solid #F2F2F2;
+  border-radius: .6rem;
+}
+
+input[type="search"]::placeholder {
+  font-weight: 900;
+  color: #000;
+  padding-left: .5rem;
+}
+
+.fa-map-marker-alt {
+  color: black;
+}
+
 @media screen and (min-width: 650px) {
   #inscription {
     order: 3;
