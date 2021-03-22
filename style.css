@@ -1,1 +1,90 @@
+html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+* {
+  font-family: "Raleway";
+  color: #000;
+  font-size: 16px;
+}
+
+body {
+  font-weight: 500;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header__image {
+  width: 6rem;
+  order: 1;
+}
+
+#inscription {
+  order: 2;
+  margin-left: 1rem;
+  padding: 1rem;
+  color: #0065FC;
+  font-weight: 900;
+  border-bottom: .2rem solid transparent;
+}
+
+#inscription:hover {
+  border-bottom: .2rem solid #0065FC;
+}
+
+#header__menu {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  order: 3;
+}
+
+#header__menu a {
+  padding: 1rem;
+  width: 50%;
+  text-align: center;
+  border-bottom: .2rem solid #F2F2F2;
+}
+
+#header__menu a:hover {
+  border-bottom: .2rem solid #0065FC;
+}
+
+@media screen and (min-width: 650px) {
+  #inscription {
+    order: 3;
+  }
+
+  #header__menu {
+    min-width: auto;
+    order: 2;
+    position: fixed;
+    right: 8.5rem;
+  }
+
+  #inscription {
+    border: none;
+  }
+
+  #header__menu a {
+    width: auto;
+    margin: 0 1rem;
+    border: none;
+  }
+
+  #header__menu a:hover, #inscription:hover {
+    padding-top: 0.8rem;
+    border: none;
+    border-top: .2rem solid #0065FC;
+  }
+}
