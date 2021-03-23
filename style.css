@@ -102,7 +102,7 @@ input[type="search"]::placeholder {
   font-weight: 900;
 }
 
-#recherche__ville-texte:hover,  #recherche__ville-search:hover {
+#recherche__ville-texte:hover,  #recherche__ville-search:hover, #recherche__filtres a:hover {
   opacity: 60%;
 }
 
@@ -121,6 +121,59 @@ input[type="search"]::placeholder {
 }
 
 h2 {
+  font-weight: 900;
+}
+
+#recherche__filtres {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center ;
+}
+
+#recherche__filtres-titre {
+  width: 100%;
+  margin: .5rem;
+}
+
+.recherche__filtres-bouton {
+  margin: .5rem;
+  padding: .2rem .5rem 0 .5rem;
+  border: .2rem solid #F2F2F2;
+  border-radius: 2rem;
+}
+
+#economique::before, #familial::before, #romantique::before, #animaux::before {
+  content:'';
+  display: inline-block;
+  vertical-align: middle;
+  margin: -.4rem .5rem -.2rem -.7rem ;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+#economique::before {
+  background: url("Images/icons/money.svg") center center no-repeat #DEEBFF;
+  background-size: 1.5rem;
+}
+
+#familial::before {
+  background: url("Images/icons/child.svg") center center no-repeat #DEEBFF;
+  background-size: 1rem;
+}
+
+#romantique::before {
+  background: url("Images/icons/heart.svg") center center no-repeat #DEEBFF;
+  background-size: 1rem;
+}
+
+#animaux::before {
+  background: url("Images/icons/dog.svg") center center no-repeat #DEEBFF;
+  background-size: 1.5rem;
+}
+
+#recherche__filtres a {
   font-weight: 900;
 }
 
@@ -158,5 +211,9 @@ h2 {
 
   #recherche__ville-texte {
     display: inline-block;
+  }
+
+  #recherche__filtres-titre {
+    width: auto;
   }
 }
