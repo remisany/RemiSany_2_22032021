@@ -17,6 +17,10 @@ a, button {
   cursor: pointer;
 }
 
+a:hover {
+  color: #0065FC;
+}
+
 #header {
   display: flex;
   flex-wrap: wrap;
@@ -40,7 +44,7 @@ a, button {
 
 #inscription:hover {
   border-bottom: .2rem solid #0065FC;
-  opacity: 60%;
+  color: #000;
 }
 
 #header__menu {
@@ -60,7 +64,6 @@ a, button {
 
 #header__menu a:hover {
   border-bottom: .2rem solid #0065FC;
-  opacity: 60%;
 }
 
 h1 {
@@ -102,10 +105,6 @@ input[type="search"]::placeholder {
   font-weight: 900;
 }
 
-#recherche__ville-texte:hover,  #recherche__ville-search:hover, #recherche__filtres a:hover {
-  opacity: 60%;
-}
-
 #recherche__ville-search {
   min-width: 3rem;
   height: 3rem;
@@ -113,6 +112,10 @@ input[type="search"]::placeholder {
   background: url("Images/icons/search.svg") center center no-repeat #0065FC;
   background-size: .8rem;
   margin-left: -.3rem;
+}
+
+#recherche__ville-texte:hover, #recherche__ville-search:hover {
+  background-color: #000;
 }
 
 #recherche__ville {
@@ -175,6 +178,23 @@ h2 {
 
 #recherche__filtres a {
   font-weight: 900;
+}
+
+#recherche__info {
+  margin: 1rem;
+}
+
+#recherche__info::before {
+  content:'';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: -.3rem .8rem 0 0;
+  border-radius: 2rem;
+  background: url("Images/icons/info.svg") center center no-repeat #0065FC;
+  background-size: 1.5rem;;
+  border: .1rem solid #F2F2F2;
 }
 
 @media screen and (min-width: 650px) {
