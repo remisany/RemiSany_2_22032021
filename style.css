@@ -150,7 +150,7 @@ input[type="search"]::placeholder {
 
 #recherche__filtres-titre {
   width: 100%;
-  margin-bottom: .5rem;
+  margin: 0 .5rem .5rem 0;
 }
 
 .recherche__filtres-bouton {
@@ -218,38 +218,34 @@ input[type="search"]::placeholder {
 #populaire {
   background-color: #F2F2F2;
   margin: 0 -1rem;
-  padding: 1.5rem 1rem;
+  padding: 0 1rem 1.5rem 1rem;;
 }
 
-#populaire-titre {
-  margin-bottom: 1.5rem;
+#populaire h2, #hebergement h2 {
+  padding: 1.5rem 0;
 }
 
-#populaire-titre:after {
+#populaire h2:after {
   content:'';
   display: inline-block;
   vertical-align: middle;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
   margin: -.1rem 0 0 5rem;
   background: url("Images/icons/arrow.svg") center center no-repeat;
-  background-size: 1.5rem;
+  background-size: 1.2rem;
 }
 
-.hotel__carte {
+.hotel__carte-populaire {
   background-color: #FFF;
   border: .3rem solid #FFF;
   border-radius: 1rem;
   height: 9rem;
+  margin-bottom: 1rem;
   display: flex;
-  margin-bottom: 1.5rem;
 }
 
-.hotel__carte-photo-conteneur {
-  height: 9rem;
-}
-
-.hotel__carte-photo {
+.hotel__carte-populaire-photo {
   border-radius: .9rem 0 0 .9rem;
   width: 9rem;
   object-fit: cover;
@@ -267,6 +263,10 @@ input[type="search"]::placeholder {
   margin-bottom: .5rem;
 }
 
+.hotel__carte-prix {
+  margin-bottom: .5rem;
+}
+
 .hotel__carte-contenu-star {
   display: flex;
   height: .7rem;
@@ -274,6 +274,24 @@ input[type="search"]::placeholder {
 
 .hotel__carte-contenu-star img {
   margin-right: .1rem;
+}
+
+/*SECTION HEBERGEMENT*/
+
+.hotel__carte-hebergement {
+  border: .3rem solid #FFF;
+  box-shadow: .1rem .1rem #F2F2F2, -.1rem -.1rem #F2F2F2;
+  border-radius: 1rem;
+  height: 13rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel__carte-hebergement-photo {
+  border-radius: .9rem .9rem 0 0;
+  height: 7rem;
+  object-fit: cover;
 }
 
 /*GRAND ECRAN*/
@@ -286,7 +304,7 @@ input[type="search"]::placeholder {
   #header__menu {
     min-width: auto;
     order: 2;
-    position: fixed;
+    position: absolute;
     right: 8.5rem;
   }
 
@@ -316,5 +334,31 @@ input[type="search"]::placeholder {
 
   #recherche__filtres-titre {
     width: auto;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  main {
+    display: flex;
+  }
+
+  #populaire {
+    order: 2;
+    min-width: 25%;
+    border-radius: 1rem;
+    margin-right: 1rem;;
+  }
+
+  #hebergement {
+    background-color: #F2F2F2;
+    margin-right: 1.5rem;
+    padding: 0 1rem;
+    flex: 1;
+    border-radius: 1rem;
+  }
+
+  .hotel__carte-hebergement {
+    box-shadow: none;
+    background-color: #FFF;
   }
 }
