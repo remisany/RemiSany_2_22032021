@@ -4,6 +4,8 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
   font-family: "Raleway";
   color: #000;
   font-size: 16px;
+  border: none;
+  text-decoration: none;
 }
 
 body {
@@ -11,8 +13,7 @@ body {
   margin: 1rem;
 }
 
-a {
-  text-decoration: none;
+a, button {
   cursor: pointer;
 }
 
@@ -39,6 +40,7 @@ a {
 
 #inscription:hover {
   border-bottom: .2rem solid #0065FC;
+  opacity: 60%;
 }
 
 #header__menu {
@@ -58,6 +60,7 @@ a {
 
 #header__menu a:hover {
   border-bottom: .2rem solid #0065FC;
+  opacity: 60%;
 }
 
 h1 {
@@ -68,20 +71,57 @@ h1 {
 }
 
 input[type="search"] {
-  height: 2.2rem;
-  width: 100%;
-  border: .2rem solid #F2F2F2;
-  border-radius: .6rem;
+  height: 3rem;
+  border-top: .1rem solid #F2F2F2;
+  border-bottom: .1rem solid #F2F2F2;
+  flex: 1;
+  max-width: 15rem;
+  padding-left: .5rem;
 }
 
 input[type="search"]::placeholder {
   font-weight: 900;
   color: #000;
-  padding-left: .5rem;
 }
 
-.fa-map-marker-alt {
-  color: black;
+#recherche__ville-map {
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: .5rem 0 0 .5rem;
+  background: url("Images/icons/map.svg") center center no-repeat #F2F2F2;
+  background-size: .8rem;
+}
+
+#recherche__ville-texte {
+  height: 3rem;
+  min-width: 8rem;
+  border-radius: 0 .5rem .5rem 0;
+  display: none;
+  background-color: #0065FC;
+  color: #FFF;
+  font-weight: 900;
+}
+
+#recherche__ville-texte:hover,  #recherche__ville-search:hover {
+  opacity: 60%;
+}
+
+#recherche__ville-search {
+  min-width: 3rem;
+  height: 3rem;
+  border-radius: .5rem;
+  background: url("Images/icons/search.svg") center center no-repeat #0065FC;
+  background-size: .8rem;
+  margin-left: -.3rem;
+}
+
+#recherche__ville {
+  margin-top: 1rem;
+  display: flex;
+}
+
+h2 {
+  font-weight: 900;
 }
 
 @media screen and (min-width: 650px) {
@@ -110,5 +150,13 @@ input[type="search"]::placeholder {
     padding-top: 0.8rem;
     border: none;
     border-top: .2rem solid #0065FC;
+  }
+
+ #recherche__ville-search {
+    display: none
+  }
+
+  #recherche__ville-texte {
+    display: inline-block;
   }
 }
