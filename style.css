@@ -1,5 +1,6 @@
 html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
+/*GENERAL*/
 * {
   font-family: "Raleway";
   color: #000;
@@ -13,6 +14,18 @@ body {
   margin: 1rem;
 }
 
+h1 {
+  font-weight: 900;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
 a, button {
   cursor: pointer;
 }
@@ -20,6 +33,8 @@ a, button {
 a:hover {
   color: #0065FC;
 }
+
+/*HEADER*/
 
 #header {
   display: flex;
@@ -33,6 +48,7 @@ a:hover {
   order: 1;
 }
 
+/*HEADER MENU*/
 #inscription {
   order: 2;
   margin-left: 1rem;
@@ -66,11 +82,11 @@ a:hover {
   border-bottom: .2rem solid #0065FC;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+/*SECTION RECHERCHE*/
+/*RECHERCHE__VILLE*/
+
+#recherche-paragraphe {
+  margin-bottom: 1.5rem;
 }
 
 input[type="search"] {
@@ -123,24 +139,22 @@ input[type="search"]::placeholder {
   display: flex;
 }
 
-h2 {
-  font-weight: 900;
-}
+/*RECHERCHE__FILTRES*/
 
 #recherche__filtres {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center ;
+  align-items: center;
 }
 
 #recherche__filtres-titre {
   width: 100%;
-  margin: .5rem;
+  margin-bottom: .5rem;
 }
 
 .recherche__filtres-bouton {
-  margin: .5rem;
+  margin: .5rem .5rem .5rem 0;
   padding: .2rem .5rem 0 .5rem;
   border: .2rem solid #F2F2F2;
   border-radius: 2rem;
@@ -150,7 +164,7 @@ h2 {
   content:'';
   display: inline-block;
   vertical-align: middle;
-  margin: -.4rem .5rem -.2rem -.7rem ;
+  margin: -.4rem .5rem -.2rem -.7rem;
   width: 3rem;
   height: 3rem;
   border-radius: 2rem;
@@ -180,8 +194,10 @@ h2 {
   font-weight: 900;
 }
 
+/*RECHERCHE__INFO*/
+
 #recherche__info {
-  margin: 1rem;
+  margin: 1rem 0 1.5rem 0;
 }
 
 #recherche__info::before {
@@ -193,9 +209,74 @@ h2 {
   margin: -.3rem .8rem 0 0;
   border-radius: 2rem;
   background: url("Images/icons/info.svg") center center no-repeat #0065FC;
-  background-size: 1.5rem;;
+  background-size: 1.5rem;
   border: .1rem solid #F2F2F2;
 }
+
+/*SECTION POPULAIRE*/
+
+#populaire {
+  background-color: #F2F2F2;
+  margin: 0 -1rem;
+  padding: 1.5rem 1rem;
+}
+
+#populaire-titre {
+  margin-bottom: 1.5rem;
+}
+
+#populaire-titre:after {
+  content:'';
+  display: inline-block;
+  vertical-align: middle;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: -.1rem 0 0 5rem;
+  background: url("Images/icons/arrow.svg") center center no-repeat;
+  background-size: 1.5rem;
+}
+
+.hotel__carte {
+  background-color: #FFF;
+  border: .3rem solid #FFF;
+  border-radius: 1rem;
+  height: 9rem;
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.hotel__carte-photo-conteneur {
+  height: 9rem;
+}
+
+.hotel__carte-photo {
+  border-radius: .9rem 0 0 .9rem;
+  width: 9rem;
+  object-fit: cover;
+}
+
+.hotel__carte-contenu {
+  margin: .8rem 0 .8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel__carte-titre {
+  font-weight: 900;
+  margin-bottom: .5rem;
+}
+
+.hotel__carte-contenu-star {
+  display: flex;
+  height: .7rem;
+}
+
+.hotel__carte-contenu-star img {
+  margin-right: .1rem;
+}
+
+/*GRAND ECRAN*/
 
 @media screen and (min-width: 650px) {
   #inscription {
@@ -226,7 +307,7 @@ h2 {
   }
 
  #recherche__ville-search {
-    display: none
+    display: none;
   }
 
   #recherche__ville-texte {
