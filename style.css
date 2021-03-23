@@ -337,14 +337,14 @@ input[type="search"]::placeholder {
   }
 }
 
-@media screen and (min-width: 730px) {
+@media screen and (min-width: 760px) {
   main {
     display: flex;
   }
 
   #populaire {
     order: 2;
-    min-width: 25%;
+    width: 25rem;
     border-radius: 1rem;
     margin-right: 1rem;;
   }
@@ -355,10 +355,20 @@ input[type="search"]::placeholder {
     padding: 0 1rem;
     flex: 1;
     border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #hebergement h2 {
+    width: 100%;
+    padding-bottom: 0;
   }
 
   .hotel__carte-hebergement {
     box-shadow: none;
     background-color: #FFF;
+    min-width: 20rem;
+    margin-right: 1.5rem;
+    flex: 1;
   }
 }
