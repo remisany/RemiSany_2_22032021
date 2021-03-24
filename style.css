@@ -246,6 +246,10 @@ input[type="search"]::placeholder {
   display: flex;
 }
 
+.hotel__carte-populaire:hover, .hotel__carte-hebergement:hover {
+  transform: scale(1.02);
+}
+
 .hotel__carte-populaire-photo {
   border-radius: .9rem 0 0 .9rem;
   width: 9rem;
