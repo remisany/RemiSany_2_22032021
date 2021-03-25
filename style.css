@@ -11,19 +11,21 @@ html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,ifr
 
 body {
   font-weight: 500;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem;
+}
+
+h1, h2 {
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
 }
 
 h1 {
-  font-weight: 900;
-  font-size: 1.2rem;
   margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
 }
 
 h2 {
-  font-weight: 900;
-  font-size: 1.2rem;
+  margin-left: 1rem;
 }
 
 a, button {
@@ -47,21 +49,7 @@ a:hover {
   order: 1;
 }
 
-/*HEADER MENU*/
-#inscription {
-  order: 2;
-  margin-left: 1rem;
-  padding: 1rem;
-  color: #0065FC;
-  font-weight: 900;
-  border-bottom: .2rem solid transparent;
-}
-
-#inscription:hover {
-  border-bottom: .2rem solid #0065FC;
-  color: #000;
-}
-
+/*nav header__menu*/
 #header__menu {
   min-width: 100%;
   display: flex;
@@ -77,16 +65,29 @@ a:hover {
   border-bottom: .2rem solid #F2F2F2;
 }
 
-#header__menu a:hover {
+/*a registration*/
+#registration {
+  order: 2;
+  padding: 1rem;
+  color: #0065FC;
+  font-weight: 900;
+  border-bottom: .2rem solid transparent;
+}
+
+#registration:hover {
+  color: #000;
+}
+
+#registration:hover, #header__menu a:hover {
   border-bottom: .2rem solid #0065FC;
 }
 
-/*SECTION RECHERCHE*/
-/*RECHERCHE__VILLE*/
-#recherche-paragraphe {
+/*SECTION RESEARCH*/
+#research-paragraph {
   margin-bottom: 1.5rem;
 }
 
+/*div research__city*/
 input[type="search"] {
   height: 3rem;
   border-top: .1rem solid #F2F2F2;
@@ -101,7 +102,7 @@ input[type="search"]::placeholder {
   color: #000;
 }
 
-#recherche__ville-map {
+#research__city-map {
   min-width: 3rem;
   height: 3rem;
   border-radius: .5rem 0 0 .5rem;
@@ -109,7 +110,7 @@ input[type="search"]::placeholder {
   background-size: .8rem;
 }
 
-#recherche__ville-texte {
+#research__city-text {
   height: 3rem;
   min-width: 8rem;
   border-radius: 0 .5rem .5rem 0;
@@ -119,7 +120,7 @@ input[type="search"]::placeholder {
   font-weight: 900;
 }
 
-#recherche__ville-search {
+#research__city-search {
   min-width: 3rem;
   height: 3rem;
   border-radius: .5rem;
@@ -128,36 +129,35 @@ input[type="search"]::placeholder {
   margin-left: -.3rem;
 }
 
-#recherche__ville-texte:hover, #recherche__ville-search:hover {
+#research__city-text:hover, #research__city-search:hover {
   background-color: #000;
 }
 
-#recherche__ville {
-  margin-top: 1rem;
+#research__city {
   display: flex;
 }
 
-/*RECHERCHE__FILTRES*/
-#recherche__filtres {
-  margin-top: 1.5rem;
+/*div research__filters*/
+#research__filters {
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-#recherche__filtres-titre {
+#research__filters-title {
   width: 100%;
-  margin: 0 .5rem .5rem 0;
+  margin: 1.2rem 1rem .5rem 0;
 }
 
-.recherche__filtres-bouton {
+.research__filters-button {
   margin: .5rem .5rem .5rem 0;
   padding: .2rem .5rem 0 .5rem;
   border: .2rem solid #F2F2F2;
   border-radius: 2rem;
 }
 
-#economique::before, #familial::before, #romantique::before, #animaux::before {
+#economic::before, #family::before, #romantic::before, #animals::before {
   content:'';
   display: inline-block;
   vertical-align: middle;
@@ -167,36 +167,36 @@ input[type="search"]::placeholder {
   border-radius: 2rem;
 }
 
-#economique::before {
+#economic::before {
   background: url("Images/icons/money.svg") center center no-repeat #DEEBFF;
   background-size: 1.5rem;
 }
 
-#familial::before {
+#family::before {
   background: url("Images/icons/child.svg") center center no-repeat #DEEBFF;
   background-size: 1rem;
 }
 
-#romantique::before {
+#romantic::before {
   background: url("Images/icons/heart.svg") center center no-repeat #DEEBFF;
   background-size: 1rem;
 }
 
-#animaux::before {
+#animals::before {
   background: url("Images/icons/dog.svg") center center no-repeat #DEEBFF;
   background-size: 1.5rem;
 }
 
-#recherche__filtres a {
+#research__filters a {
   font-weight: 900;
 }
 
-/*RECHERCHE__INFO*/
-#recherche__info {
+/*research__INFO*/
+#research__info {
   margin: 1rem 0 1.5rem 0;
 }
 
-#recherche__info::before {
+#research__info::before {
   content:'';
   display: inline-block;
   vertical-align: middle;
@@ -209,109 +209,108 @@ input[type="search"]::placeholder {
   border: .1rem solid #F2F2F2;
 }
 
-/*SECTION POPULAIRE*/
-#populaire {
-  background-color: #F2F2F2;
+/*SECTION POPULAR, ACCOMODATION, ACTIVITES*/
+#popular, #accomodation, #activities {
   margin: 0 -1rem;
-  padding: 0 1rem 1.5rem 1rem;
+  padding: 1.5rem .5rem;
 }
 
-#populaire h2, #hebergement h2, #activites h2 {
-  padding: 1.5rem 0;
+#popular, #accomodation, #container-activities {
+  display: flex;
+  flex-direction: column;
 }
 
-#populaire h2:after {
-  content:'';
-  display: inline-block;
-  vertical-align: middle;
-  width: 1.2rem;
-  height: 1.2rem;
-  position: absolute;
-  right: 1rem;
-  background: url("Images/icons/arrow.svg") center center no-repeat;
-  background-size: 1.2rem;
+/*SECTION POPULAR*/
+#popular {
+  background-color: #F2F2F2;
 }
 
-.carte-populaire {
+/*SECTION ACCOMODATION*/
+#afficher_plus {
+  padding: 1rem 1rem 0 1rem;
+  font-weight: 900;
+}
+
+/*SECTION ACTIVITIES*/
+#activities .card {
+  border: none;
+}
+
+#container-activities {
+  display: flex;
+  flex-direction: column;
+}
+
+/*CARD POPULAR, ACCOMODATION, ACTIVITES*/
+.card {
+  display: flex;
   background-color: #FFF;
+  box-shadow: .1rem .1rem #F2F2F2, -.1rem -.1rem #F2F2F2;
   border: .3rem solid #FFF;
   border-radius: 1rem;
-  max-height: 9rem;
-  min-height: 9rem;
-  margin-bottom: 1rem;
-  display: flex;
+  margin: .5rem .5rem;
+  flex: 1;
 }
 
-.carte-populaire:hover, .carte-hebergement:hover, .carte-activites:hover {
+.card:hover {
   transform: scale(1.02);
 }
 
-.carte-populaire-photo {
-  border-radius: .9rem 0 0 .9rem;
-  width: 9rem;
+.card-column {
+  height: 9rem;
+  max-height: 13rem;
+}
+
+.card-row {
+  height: 13rem;
+  min-width: 16rem;
+}
+
+.card-row {
+  flex-direction: column;
+}
+
+.card-photo {
   object-fit: cover;
 }
 
-.carte-contenu {
-  margin: .8rem 0 .8rem 1rem;
+.card-photo-column {
+  border-radius: .8rem 0 0 .8rem;
+  height: 100%;
+  width: 40%;
+}
+
+.card-photo-row {
+  border-radius: .8rem .8rem 0 0;
+}
+
+.card-photo-accomodation {
+  height: 50%;
+}
+
+.card-photo-activities {
+  height: 75%;
+}
+
+.card-content {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex: 1;
 }
 
-.carte-titre {
+.card-content-text-title {
   font-weight: 900;
-  margin-bottom: .5rem;
+  padding-bottom: .5rem;
 }
 
-.carte-prix {
-  margin-bottom: .5rem;
-}
-
-.carte-contenu-star {
+.card-content-star {
   display: flex;
   height: .7rem;
 }
 
-.carte-contenu-star img {
-  margin-right: .1rem;
-}
-
-/*SECTION HEBERGEMENT*/
-.carte-hebergement {
-  border: .3rem solid #FFF;
-}
-
-.carte-hebergement, .carte-activites {
-  box-shadow: .1rem .1rem #F2F2F2, -.1rem -.1rem #F2F2F2;
-  border-radius: 1rem;
-  height: 13rem;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.carte-hebergement-photo, .carte-activites-photo {
-  border-radius: .9rem .9rem 0 0;
-  object-fit: cover;
-}
-
-.carte-hebergement-photo {
-  max-height: 7rem;
-}
-
-.carte-activites-photo {
-  max-height: 7rem;
-}
-
-#afficher_plus {
-  display: block;
-  font-weight: 900;
-  padding: .5rem 0 .5rem 0;
-  margin: 0rem 0 1rem 0;
-}
-
-/*SECTION FOOTER*/
+/*FOOTER*/
 h3 {
   font-weight: 900;
   padding-bottom: .5rem;
@@ -326,7 +325,7 @@ footer a {
 
 footer {
   background: #F2F2F2;
-  margin: 0 -1rem;
+  margin: 0 -1rem -1rem -1rem;
   padding: 0 4rem 1.5rem 0;
   display: flex;
   flex-wrap: wrap;
@@ -334,24 +333,18 @@ footer {
 }
 
 footer div {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
 }
 
 /*GRAND ECRAN*/
 @media screen and (min-width: 650px) {
-  #inscription {
-    order: 3;
-  }
-
+  /*HEADER*/
+  /*nav header__menu*/
   #header__menu {
     min-width: auto;
     order: 2;
     position: absolute;
     right: 8.5rem;
-  }
-
-  #inscription {
-    border: none;
   }
 
   #header__menu a {
@@ -360,118 +353,74 @@ footer div {
     border: none;
   }
 
-  #header__menu a:hover, #inscription:hover {
+  #header__menu a:hover, #registration:hover {
     padding-top: 0.8rem;
     border: none;
     border-top: .2rem solid #0065FC;
   }
 
- #recherche__ville-search {
+  /*a registration*/
+  #registration {
+    border: none;
+    order: 3;
+  }
+
+  /*SECTION RESEARCH*/
+  /*div research__city*/
+  #research__city-search {
     display: none;
   }
 
-  #recherche__ville-texte {
+  #research__city-text {
     display: inline-block;
   }
 
-  #recherche__filtres-titre {
+  #research__city-search {
+    display: none;
+  }
+
+  #research__city-text {
+    display: inline-block;
+  }
+
+  /*div research__filters*/
+  #research__filters-title {
     width: auto;
   }
 }
 
 @media screen and (min-width: 760px) {
+  /*SECTION POPULAR, ACCOMODATION, ACTIVITES*/
   #main {
     display: flex;
-   }
+  }
 
-  #populaire {
+  #popular {
     order: 2;
-    width: 25rem;
-    border-radius: 1rem;
+    width: 35%;
+  }
+
+  #popular, #accomodation {
+    border-radius: 1.2rem;
     margin: 0;
   }
 
-  #populaire h2:after {
-    right: 2rem;
-  }
-
-  #hebergement {
+  #accomodation {
     background-color: #F2F2F2;
-    margin-right: 1rem;
-    padding-left: 1rem;
     flex: 1;
-    border-radius: 1rem;
-    display: flex;
+    margin-right: 1rem;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
-  #hebergement h2, #afficher_plus {
+  #accomodation h2, #afficher_plus {
     width: 100%;
-  }
-
-  .carte-hebergement {
-    box-shadow: none;
-  }
-
-  .carte-hebergement, .carte-activites {
-    background-color: #FFF;
-    margin-right: 1rem;
-  }
-
-  .carte-hebergement {
-    min-width: 18rem;
-    flex: 1;
-  }
-
-  #conteneur-activites {
-    margin-right: -1rem;
-    height: 50rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .grande {
-     min-height: 50%;
-     flex: 1;
-  }
-
-  .moyenne {
-    min-height: 35%;
-    flex: 1;
-  }
-
-  .petite {
-    min-height: 20%;
-    flex: 1;
   }
 }
 
 @media screen and (min-width: 930px) {
-  #conteneur-activites {
-    margin-right: -1rem;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .grande {
-    min-height: 90%;
-  }
-
-  .moyenne {
-    min-height: 55%;
-  }
-
-  .petite {
-    min-height: 35%;
-  }
 }
 
-
+/*TRES PETIT ECRAN*/
 @media screen and (max-width: 350px) {
-  .carte-populaire {
-    max-height: 11rem;
-  }
 }
