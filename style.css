@@ -265,7 +265,7 @@ input[type="search"]::placeholder {
 }
 
 .carte-prix {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 .carte-contenu-star {
@@ -285,7 +285,7 @@ input[type="search"]::placeholder {
 .carte-hebergement, .carte-activites {
   box-shadow: .1rem .1rem #F2F2F2, -.1rem -.1rem #F2F2F2;
   border-radius: 1rem;
-  min-height: 13rem;
+  height: 13rem;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -294,6 +294,13 @@ input[type="search"]::placeholder {
 .carte-hebergement-photo, .carte-activites-photo {
   border-radius: .9rem .9rem 0 0;
   object-fit: cover;
+}
+
+.carte-hebergement-photo {
+  max-height: 7rem;
+}
+
+.carte-activites-photo {
   max-height: 7rem;
 }
 
@@ -418,6 +425,31 @@ footer div {
 
   #conteneur-activites {
     margin-right: -1rem;
+    height: 50rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .grande {
+     min-height: 50%;
+     flex: 1;
+  }
+
+  .moyenne {
+    min-height: 35%;
+    flex: 1;
+  }
+
+  .petite {
+    min-height: 20%;
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 930px) {
+  #conteneur-activites {
+    margin-right: -1rem;
     height: 30rem;
     display: flex;
     flex-direction: column;
@@ -425,20 +457,18 @@ footer div {
   }
 
   .grande {
-    min-height: auto;
-    height: 100%;
+    min-height: 90%;
   }
 
   .moyenne {
-    min-height: auto;
-    height: 55%;
+    min-height: 55%;
   }
 
   .petite {
-    min-height: auto;
-    height: 38.3%;
+    min-height: 35%;
   }
 }
+
 
 @media screen and (max-width: 350px) {
   .carte-populaire {
