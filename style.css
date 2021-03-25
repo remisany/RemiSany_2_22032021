@@ -35,7 +35,6 @@ a:hover {
 }
 
 /*HEADER*/
-
 #header {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +83,6 @@ a:hover {
 
 /*SECTION RECHERCHE*/
 /*RECHERCHE__VILLE*/
-
 #recherche-paragraphe {
   margin-bottom: 1.5rem;
 }
@@ -140,7 +138,6 @@ input[type="search"]::placeholder {
 }
 
 /*RECHERCHE__FILTRES*/
-
 #recherche__filtres {
   margin-top: 1.5rem;
   display: flex;
@@ -195,7 +192,6 @@ input[type="search"]::placeholder {
 }
 
 /*RECHERCHE__INFO*/
-
 #recherche__info {
   margin: 1rem 0 1.5rem 0;
 }
@@ -214,7 +210,6 @@ input[type="search"]::placeholder {
 }
 
 /*SECTION POPULAIRE*/
-
 #populaire {
   background-color: #F2F2F2;
   margin: 0 -1rem;
@@ -282,15 +277,7 @@ input[type="search"]::placeholder {
   margin-right: .1rem;
 }
 
-#afficher_plus {
-  display: block;
-  font-weight: 900;
-  padding: .5rem 0 .5rem 0;
-  margin: 0rem 0 1rem 0;
-}
-
 /*SECTION HEBERGEMENT*/
-
 .carte-hebergement {
   border: .3rem solid #FFF;
 }
@@ -310,8 +297,14 @@ input[type="search"]::placeholder {
   max-height: 7rem;
 }
 
-/*SECTION FOOTER*/
+#afficher_plus {
+  display: block;
+  font-weight: 900;
+  padding: .5rem 0 .5rem 0;
+  margin: 0rem 0 1rem 0;
+}
 
+/*SECTION FOOTER*/
 h3 {
   font-weight: 900;
   padding-bottom: .5rem;
@@ -338,7 +331,6 @@ footer div {
 }
 
 /*GRAND ECRAN*/
-
 @media screen and (min-width: 650px) {
   #inscription {
     order: 3;
@@ -406,14 +398,7 @@ footer div {
     flex-wrap: wrap;
   }
 
-  #activites {
-    margin: 0 -1rem 0 0;
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-  }
-
-  #hebergement h2, #afficher_plus, #activites h2 {
+  #hebergement h2, #afficher_plus {
     width: 100%;
   }
 
@@ -423,9 +408,35 @@ footer div {
 
   .carte-hebergement, .carte-activites {
     background-color: #FFF;
-    min-width: 18rem;
     margin-right: 1rem;
+  }
+
+  .carte-hebergement {
+    min-width: 18rem;
     flex: 1;
+  }
+
+  #conteneur-activites {
+    margin-right: -1rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .grande {
+    min-height: auto;
+    height: 100%;
+  }
+
+  .moyenne {
+    min-height: auto;
+    height: 55%;
+  }
+
+  .petite {
+    min-height: auto;
+    height: 38.3%;
   }
 }
 
