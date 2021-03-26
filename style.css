@@ -350,18 +350,21 @@ footer div {
   #header__menu a {
     width: auto;
     margin: 0 1rem;
+   }
+
+  #header__menu a,  #registration {
     border: none;
+    border-top: .2rem solid transparent;
   }
 
   #header__menu a:hover, #registration:hover {
-    padding-top: 0.8rem;
+    /*padding-top: 0.8rem;*/
     border: none;
     border-top: .2rem solid #0065FC;
   }
 
   /*a registration*/
   #registration {
-    border: none;
     order: 3;
   }
 
