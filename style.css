@@ -336,6 +336,17 @@ footer div {
   padding: 0 1rem;
 }
 
+#container-activities {
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+}
+
+.display_column {
+  display: flex;
+  flex-direction: column;
+}
+
 /*GRAND ECRAN*/
 @media screen and (min-width: 650px) {
   /*HEADER*/
@@ -419,10 +430,48 @@ footer div {
   #accomodation h2, #afficher_plus {
     width: 100%;
   }
+
+  #container-activities {
+    flex-direction: row;
+    min-height: 31rem;
+  }
+
+  .display_column {
+    width: 50%;
+    min-height: 31rem;
+  }
+
+  .large {
+    max-height: 30rem;
+  }
+
+  .medium {
+    max-height: 17rem;
+  }
+
+  .small {
+    max-height: 12rem;
+  }
+
+  .large .card-photo-activities {
+    height: 100%;
+   }
+
+  .medium .card-photo-activities {
+    height: 78.5%;
+  }
+
+  .small .card-photo-activities {
+    height: 69.5%;
+  }
 }
 
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 1150px) {
+  .display_column {
+    width: 25%;
+  }
 }
+
 
 /*TRES PETIT ECRAN*/
 @media screen and (max-width: 350px) {
