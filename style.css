@@ -226,6 +226,17 @@ input[type="search"]::placeholder {
   background-color: #F2F2F2;
 }
 
+#popular-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+#arrow {
+  padding-right: .5rem;
+  padding-top: .2rem;
+  height: 1.3rem;
+}
+
 /*SECTION ACCOMODATION*/
 #afficher_plus {
   padding: 1rem 1rem 0 1rem;
