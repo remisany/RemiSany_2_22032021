@@ -258,12 +258,14 @@ input[type="search"]::placeholder {
 }
 
 .card-column {
-  height: 9rem;
-  max-height: 13rem;
+  min-height: 9rem;
+  max-height: 9rem;
 }
 
 .card-row {
-  height: 13rem;
+  min-height: 14rem;
+  height: 14rem;
+  max-height: 14rem;
   min-width: 16rem;
 }
 
@@ -277,7 +279,6 @@ input[type="search"]::placeholder {
 
 .card-photo-column {
   border-radius: .8rem 0 0 .8rem;
-  height: 100%;
   width: 40%;
 }
 
@@ -286,7 +287,7 @@ input[type="search"]::placeholder {
 }
 
 .card-photo-accomodation {
-  height: 50%;
+  height: 7rem;
 }
 
 .card-photo-activities {
@@ -412,12 +413,20 @@ footer div {
 
   #popular {
     order: 2;
-    width: 35%;
+    width: 40%;
   }
 
   #popular, #accomodation {
     border-radius: 1.2rem;
     margin: 0;
+  }
+
+  .card-column {
+    max-height: 11rem;
+  }
+
+  .card-row {
+    min-height: auto;
   }
 
   #accomodation {
@@ -470,5 +479,22 @@ footer div {
 @media screen and (min-width: 1150px) {
   .display_column {
     width: 25%;
+  }
+
+  .card-column {
+    max-height: 9rem;
+  }
+}
+
+@media screen and (min-width: 918px) {
+  #popular {
+    width: 35%;
+  }
+}
+
+/*TRES PETIT ECRAN*/
+@media screen and (max-width: 350px) {
+  .card-column {
+    min-height: 11rem;
   }
 }
