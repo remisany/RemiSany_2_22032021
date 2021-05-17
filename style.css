@@ -309,6 +309,7 @@ input[type="search"]::placeholder {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   flex: 1;
 }
@@ -320,6 +321,7 @@ input[type="search"]::placeholder {
 
 .card-content-star {
   display: flex;
+  width: .7rem;
   height: .7rem;
 }
 
@@ -382,7 +384,6 @@ footer div {
   }
 
   #header__menu a:hover, #registration:hover {
-    /*padding-top: 0.8rem;*/
     border: none;
     border-top: .2rem solid #0065FC;
   }
